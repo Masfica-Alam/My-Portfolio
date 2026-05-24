@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masfica Alam | Data Science & Full-Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Chart.js for the dashboard section -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <nav class="navbar">
+
+
+
+    <ul class="navbar__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+
+    <div class="navbar__controls">
+      <!-- Clicking this button toggles dark/light mode -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"></button>
+
+      <!-- Hamburger shown on mobile -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </nav>
+
+
+  <!--  MOBILE FULLSCREEN MENU-->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileMenuClose">✕</button>
+    <a href="#about" class="nav-mobile-link">About</a>
+    <a href="#skills" class="nav-mobile-link">Skills</a>
+    <a href="#projects" class="nav-mobile-link">Projects</a>
+    <a href="#dashboard" class="nav-mobile-link">Dashboard</a>
+    <a href="#education" class="nav-mobile-link">Education</a>
+    <a href="#contact" class="nav-mobile-link">Contact</a>
+  </div>
+
+
+  <!--  HERO SECTION -->
+  <section class="hero" id="hero">
+
+    <!-- Background glow blobs (purely decorative) -->
+    <div class="hero__glow hero__glow--purple"></div>
+    <div class="hero__glow hero__glow--blue"></div>
+
+    <div class="hero__inner">
+
+      <!-- LEFT: Text content -->
+      <div class="hero__text">
+
+
+
+        <!-- Intro lines -->
+        <p class="hero__greeting">Hi, My name is</p>
+
+        <h1 class="hero__name">
+          <span class="gradient-text">Masfica</span><br>
+          <span class="gradient-text">Alam</span>
+        </h1>
+
+        <p class="hero__passion-line">and I am Passionate about</p>
+
+        <!-- Typing animation — JS fills this in -->
+        <div class="hero__typing">
+          <span id="typingText"></span>
+          <span class="hero__cursor"></span>
+        </div>
+
+        <p class="hero__tagline">
+          I am focused on building intelligent systems and modern web applications that deliver practical solutions to
+          real-world problems.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="hero__buttons">
+          <a href="#projects" class="btn-primary">
+            ◈ View Projects
+          </a>
+          <a href="#" class="btn-secondary" id="downloadCV">
+            ↓ Download Resume
+          </a>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-number">3+</div>
+            <div class="hero__stat-label">Projects Built</div>
+          </div>
+          <div>
+            <div class="hero__stat-number">5+</div>
+            <div class="hero__stat-label">Tech Stacks</div>
+          </div>
+          <div>
+            <div class="hero__stat-number">2+</div>
+            <div class="hero__stat-label">Years Coding</div>
+          </div>
+        </div>
+
+      </div><!-- end .hero__text -->
+
+
+      <!-- RIGHT: Photo -->
+      <div class="hero__photo-side">
+        <div class="hero__photo-frame">
+
+          <!-- Decorative animated rings -->
+          <div class="hero__ring hero__ring--1"></div>
+          <div class="hero__ring hero__ring--2"></div>
+
+
+          <img src="my.PNG" alt="Masfica Alam" class="hero__photo" />
+
+
+
+
+
+
+
+
+
+  </section><!-- end #hero -->
+
+
+  <!-- ABOUT SECTION-->
+  <section class="section section--alt" id="about">
+
+    <div class="about__grid">
+
+      <!-- Left: decorative box with floating tags -->
+      <div class="reveal">
+
+      </div>
+
+      <!-- Right: written content -->
+      <div class="about__text reveal delay-1">
+
+        <div class="section-header">
+          <p class="section-tag">Who I Am</p>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <p>
+          I'm a final-year Computer Science & Engineering student with an interest in
+          full-stack web development and data science. I enjoy building practical web
+          applications and learning modern technologies that solve real-world problems.
+        </p>
+
+        <p>
+          I have experience working with HTML, CSS, JavaScript, PHP, Node.js, and
+          MySQL . I enjoy developing user-friendly systems with authentication,
+          database management, and responsive interfaces.
+        </p>
+
+
+        <p>
+          Currently, I am improving my skills in backend development, databases,
+          and data science while working on academic and personal projects.
+        </p>
+
+
+
+
+
+        <ul class="about__highlights">
+          <li class="about__highlight-item">BSc in Computer Science & Engineering (Data Science)</li>
+          <li class="about__highlight-item">Full-Stack Web Development Enthusiast</li>
+          <li class="about__highlight-item">Experience with PHP, Node.js & MySQL</li>
+          <li class="about__highlight-item">Interested in Data Science & Intelligent Systems</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS SECTION -->
+  <section class="section" id="skills">
+
+    <div class="section-header reveal">
+      <p class="section-tag">Technical Skills</p>
+      <h2 class="section-title">What I Work With</h2>
+      <p class="section-subtitle">
+        A focused stack built for performance, intelligence, and real-world use.
+      </p>
+    </div>
+
+    <div class="skills__grid">
+
+      <!-- Card 1: Programming Languages -->
+      <div class="skill-card reveal">
+        <div class="skill-card__category">💻 Programming Languages</div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">Python</span>
+            <span class="skill-item__percent">92%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="92"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">C++</span>
+            <span class="skill-item__percent">78%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="78"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">Java</span>
+            <span class="skill-item__percent">72%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="72"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Web Development -->
+      <div class="skill-card reveal delay-1">
+        <div class="skill-card__category">🌐 Web Development</div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">HTML & CSS</span>
+            <span class="skill-item__percent">88%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="88"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">JavaScript</span>
+            <span class="skill-item__percent">82%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="82"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">Node.js</span>
+            <span class="skill-item__percent">80%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="80"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Data Science & ML -->
+      <div class="skill-card reveal delay-2">
+        <div class="skill-card__category">🧠 Data Science & ML</div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">Machine Learning</span>
+            <span class="skill-item__percent">85%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">Pandas & NumPy</span>
+            <span class="skill-item__percent">88%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="88"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">Deep Learning / CV</span>
+            <span class="skill-item__percent">78%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="78"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Tools & Database -->
+      <div class="skill-card reveal delay-3">
+        <div class="skill-card__category">🛠 Tools & Database</div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">MySQL</span>
+            <span class="skill-item__percent">82%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="82"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__header">
+            <span class="skill-item__name">Git & GitHub</span>
+            <span class="skill-item__percent">85%</span>
+          </div>
+          <div class="skill-bar__bg">
+            <div class="skill-bar__fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <!-- Extra tags for miscellaneous tools -->
+        <div class="skill-tags">
+          <span class="tag">OpenCV</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Linux</span>
+          <span class="tag">VS Code</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS SECTION -->
+  <section class="section section--alt" id="projects">
+
+    <div class="section-header reveal">
+      <p class="section-tag">Portfolio</p>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">
+        Real systems I've built — combining data science and full-stack skills.
+      </p>
+    </div>
+
+    <!-- Filter buttons — clicking these shows/hides project cards -->
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai">AI / ML</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+    </div>
+
+    <div class="projects__grid">
+
+      <!-- Project 1 -->
+      <div class="project-card reveal" data-category="ai">
+        <div class="project-card__number">// Project 01</div>
+        <div class="project-card__icon">🗑️</div>
+        <h3 class="project-card__title">Smart Waste Managment System(ongoing)</h3>
+        <p class="project-card__description">
+          The Smart Waste Management System is a web-based platform that allows citizens to report waste problems and
+          track their status
+          in real time. It helps authorities manage complaints efficiently, prioritize urgent issues, and improve waste
+          collection.the system ptomotes transparency,faster response and cleaner city management.
+        </p>
+        <div class="project-card__techs">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">Deep Learning</span>
+          <span class="tech-tag">CNN</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://github.com/Masfica-Alam/Medical-Waste-Prediction-ML" class="project-card__link"
+            target="_blank">⌥ GitHub</a>
+          <a href="https://github.com/Masfica-Alam/Medical-Waste-Prediction-ML" class="project-card__link"
+            target="_blank">
+            ↗ Demo</a>
+        </div>
+
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal delay-1" data-category="fullstack web">
+        <div class="project-card__number">// Project 02</div>
+        <div class="project-card__icon">💰</div>
+        <h3 class="project-card__title">Personal Finance Tracker(ongoing)</h3>
+        <p class="project-card__description">
+          A full-stack web app for tracking income and expenses. Features an interactive
+          dashboard with charts, budget summaries, and a clean responsive UI that makes
+          managing personal finances straightforward.
+        </p>
+        <div class="project-card__techs">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Chart.js</span>
+        </div>
+        <div class="project-card__links">
+          <a href="#" class="project-card__link">⌥ GitHub</a>
+          <a href="#" class="project-card__link">↗ Demo</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card reveal delay-2" data-category="fullstack web">
+        <div class="project-card__number">// Project 03</div>
+        <div class="project-card__icon">🌾</div>
+        <h3 class="project-card__title">AgroMarket (Group Project) Ongoing</h3>
+        <p class="project-card__description">
+          AgroMarket is a web-based platform that connects farmers and buyers directly for trading agricultural
+          products. It helps farmers sell their products at fair prices while allowing buyers to find fresh produce
+          easily. The system improves transparency, reduces middlemen, and supports efficient agricultural marketing.
+        </p>
+
+        <p class="project-card__description">
+          <strong>My Role (Backend):</strong> Backend development using PHP, including user authentication and product
+          management. Used MySQL for storing application data.
+        </p>
+        <div class="project-card__techs">
+          <span class="tech-tag">PHP</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">REST API</span>
+          <span class="tech-tag">Authentication</span>
+          <span class="tech-tag">Database Design</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://github.com/Masfica-Alam/Agromarket" class="project-card__link" target="_blank">⌥ GitHub</a>
+          <a href="https://github.com/Masfica-Alam/Agromarket" class="project-card__link" target="_blank">↗ Demo</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- EDUCATION SECTION -->
+  <section class="section section--alt" id="education">
+
+    <div class="section-header reveal">
+      <p class="section-tag">Background</p>
+      <h2 class="section-title">Education</h2>
+      <p class="section-subtitle">
+        My academic path in computer science with a focus on data science.
+      </p>
+    </div>
+
+    <div class="education__timeline">
+
+      <!-- Entry 1 -->
+      <div class="edu-item reveal">
+        <div class="edu-item__dot"></div>
+        <div class="edu-item__card">
+          <div class="edu-item__year">2023 — Present</div>
+          <div class="edu-item__degree">Bachelor of Science in Computer Science & Engineering</div>
+          <div class="edu-item__degree">United International University.Specialization in Data Science</div>
+          <div class="edu-item__tags">
+            <span class="tag">Data Science</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">Database Systems</span>
+            <span class="tag">Software Engineering</span>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 2 -->
+      <div class="edu-item reveal delay-1">
+        <div class="edu-item__dot"></div>
+        <div class="edu-item__card">
+          <div class="edu-item__year">Ongoing</div>
+          <div class="edu-item__degree">Self-Directed Learning</div>
+          <div class="edu-item__school">Online courses, personal projects & research</div>
+          <div class="edu-item__tags">
+            <span class="tag">Web Development</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">System Design</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!--
+     CONTACT SECTION-->
+  <section class="section" id="contact">
+
+    <div class="section-header reveal">
+      <p class="section-tag">Get in Touch</p>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-subtitle">
+        Open to internships, collaborations, and full-time opportunities.
+      </p>
+    </div>
+
+    <div class="contact__grid">
+
+      <!-- LEFT: Contact Info -->
+      <div class="contact__info reveal">
+        <h3>>Let's Connect</h3>
+        <p>
+          Whether you have a project idea, collaboration opportunity,
+          or simply want to connect, feel free to send me a message.
+          I'd be happy to hear from you.
+        </p>
+
+        <div class="contact__links">
+
+          <!-- Email -->
+          <a href="mailto:masficaalam@gmail.com" class="contact-link">
+            <div class="contact-link__icon">📧</div>
+            <div>
+              <div class="contact-link__label">Email</div>
+              <div class="contact-link__value">masficaalam@gmail.com</div>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/masfica-alam-554471266/" target="_blank" class="contact-link">
+            <div class="contact-link__icon">💼</div>
+            <div>
+              <div class="contact-link__label">LinkedIn</div>
+              <div class="contact-link__value">linkedin.com/in/masfica-alam</div>
+            </div>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/Masfica-Alam" target="_blank" class="contact-link">
+            <div class="contact-link__icon">🐙</div>
+            <div>
+              <div class="contact-link__label">GitHub</div>
+              <div class="contact-link__value">github.com/masfica-alam</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact Form -->
+
+
+      <div class="reveal delay-1">
+        <form class="contact__form" id="contactForm" action="https://formspree.io/f/xredljpn" method="POST">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-input" name="name" id="name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" name="email" id="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <input type="text" class="form-input" name="subject" id="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" name="message" id="message" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Message</button>
+
+          <div class="form-success" id="formSuccess">
+            ✅ Message sent successfully!
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+
+  </section>
+  <!-- 
+       FOOTER
+        -->
+  <footer class="footer">
+    <div class="footer__copy">
+      Made with ♥ by <span>Masfica Alam</span> · <span id="year">2024</span>
+    </div>
+    <div class="footer__links">
+      <a href="#hero" class="footer__link">Back to top ↑</a>
+      <a href="https://github.com/masfica-alam" class="footer__link">GitHub</a>
+      <a href="https://linkedin.com/in/masfica-alam" class="footer__link">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="javasript.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
